@@ -1,0 +1,52 @@
+{
+  "name": "fullworks/get-directions",
+  "description": "Wordpress plugin",
+  "type": "wordpress-plugin",
+  "license": "GPL",
+  "authors": [
+    {
+      "name": "alan",
+      "email": "alan@fullworks.net"
+    }
+  ],
+  "minimum-stability": "stable",
+  "config": {
+    "vendor-dir": "includes/vendor"
+  },
+  "repositories": {
+    "gamajo-template-loader": {
+      "type": "vcs",
+      "url": "https://github.com/garyjones/gamajo-template-loader"
+    },
+    "wordpress-sdk": {
+      "type": "vcs",
+      "url": "https://github.com/Freemius/wordpress-sdk"
+    },
+    "plugindonations_lib": {
+      "type": "vcs",
+      "url": "https://github.com/alanef/plugindonation_lib"
+    }
+  },
+  "require": {
+    "php": ">=5.3.0",
+    "composer/installers": "v1.0.12",
+    "cmb2/cmb2": "*",
+    "gamajo/template-loader": "dev-master",
+    "freemius/wordpress-sdk": "dev-master",
+    "alanef/plugindonation_lib": "dev-master",
+    "matomo/device-detector": "dev-master"
+  },
+  "autoload": {
+    "files": [
+      "includes/vendor/cmb2/init.php"
+    ]
+  },
+  "extra": {
+    "installer-paths": {
+      "includes/vendor/{$name}/": [
+        "cmb2/cmb2",
+        "stackadroit/cmb2-extensions"
+      ]
+    }
+  }
+}
