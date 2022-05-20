@@ -1,8 +1,8 @@
-=== Get Direction Map  ===
+=== Get Directions Map  ===
 Contributors: fullworks, alanfuller
 Donate Link: https://www.paypal.com/donate/?hosted_button_id=UGRBY5CHSD53Q
 Tags: MapQuest, Maps, Responsive Map, Directions, Get Directions, Map
-Tested up to: 5.9
+Tested up to: 6.0
 Stable tag: 2.15.9
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html

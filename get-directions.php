@@ -11,7 +11,7 @@
  * that starts the plugin.
  *
  *
- * Plugin Name:       Get Direction Map
+ * Plugin Name:       Get Directions Map
  * Plugin URI:        http://fullworks.net/products/get-directions/
  * Description:       Map with directions display using MapQuest
  * Version:           2.15.9
