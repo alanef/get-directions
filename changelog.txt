@@ -1,0 +1,103 @@
+= 2.15.10 =
+* update freemius library
+
+= 2.15.9 =
+* Add free donation info
+
+= 2.15.8 =
+* Library updates
+
+= 2.15.7 =
+* Library updates
+
+= 2.15.6 =
+* Library updates
+
+= 2.15.5 =
+* Disable scroll wheel zoom to map it more like Google Maps
+
+= 2.15.4 =
+* Premium only - multi pin - unlimited
+
+= 2.15.3 =
+* Changed settings to point to new knowledgebase
+
+= 2.15.2 =
+* Update Freemius Library to 2.3.0
+* Make default shortcode ids unique based on post id
+
+= 2.15.1 =
+* Minor improvement
+
+= 2.15 =
+* Minor improvement
+
+= 2.14 =
+* Fixed missing dependency
+
+= 2.13 =
+* Minor change for 5.0 plus fixed missing arrow fonts in css
+
+= 2.12 =
+* minor change to settings
+
+= 2.11 =
+* minor change to settings
+
+= 2.10 =
+* remove spaces from height / width css
+
+= 2.9 =
+* load mapquest js and css locally to improve reliability
+
+= 2.8 =
+* template tweak - minor
+
+= 2.7 =
+* added internationalisation features of locale and distance units
+
+= 2.6 =
+* fix pin not showing
+
+= 2.5 =
+* bug fix
+
+= 2.4 =
+* fix set of post type ..
+
+
+= 2.3 =
+* Fix bug that stops route showing
+
+= 2.2 =
+* Minor fixes
+
+= 2.1 =
+* Bug fix to 2.0 and add legacy shortcode latlong as alias for latlng
+
+= 2.0 =
+* Complete rebuild using new Map Quest API - note some features from earlier versions may not be available, if this were working for you you can remain at v1.24 but this version has no ongoing support.
+
+= 1.24 =
+* Removed hard coded http:// to stop issues with insecure content on https://pages
+= 1.23 =
+* Important, geocoding by postcode is no longer supported in the shortcode, only use lat / long. Change your shortcodes if using postcode before upgrading. Changed calls to MapQuest Open rather than MapQuest Community as MapQuest is removing this as of 31 Dec 2014, so earlier versions of this plugin may not work after 1 Jan 2015
+= 1.22 =
+* Remove credit link to llocally, cause no one likes those
+= 1.21 =
+* minor fix to remove warning message
+= 1.2 =
+* removed the need for new users to get an API key from mapquest, you can still use your own Mapquest API key if you like add
+define( 'MAPQUEST_API_KEY', 'your long api key here' ); to your wp-config.php file
+= 1.1 =
+* fixed bug where browser asking for location when no route required
+* added feature to optionally show or hide map on mobile devices - leaving just the button
+* added new feature to display a radius area to the short code
+= 1.002 =
+* allow settings page =
+= 1.001b =
+* readme changes
+= 1.001a =
+* added images to readme
+= 1.0 =
+*  added readme.txt
