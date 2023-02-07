@@ -115,6 +115,7 @@ class Core
     private function define_admin_hooks()
     {
         $plugin_admin = new Admin( $this->get_plugin_name(), $this->get_version() );
+        add_action( 'admin_notices', array( $plugin_admin, 'display_admin_notice' ) );
         $this->loader->add_action( 'widgets_init', $plugin_admin, 'register_custom_widgets' );
         $this->freemius->add_filter(
             'connect_message_on_update',

@@ -41,13 +41,14 @@ class PluginDonation {
 	 *
 	 * @since 1.0
 	 */
-	public function __construct( $plugin_slug, $settings_hook, $plugin_file, $settings_url, $title, $freemius = null ) {
+	public function __construct( $plugin_slug, $settings_hook, $plugin_file, $settings_url, $title, $freemius = null, $repo = 'wp.org' ) {
 		$this->plugin_slug   = $plugin_slug;
 		$this->settings_hook = $settings_hook;
 		$this->plugin_file   = $plugin_file;
 		$this->settings_url  = $settings_url;
 		$this->title         = $title;
 		$this->freemius      = $freemius;
+		$this->repo          = $repo;
 		$this->hooks();
 	}
 
@@ -133,7 +134,7 @@ class PluginDonation {
 
 		if ( $this->plugin_file === $file ) {
 			$new_links = array(
-				'<a href="https://www.buymeacoffee.com/wpdevalan" target="_blank">' . esc_html( $this->get_string( 34 ) ) . '</a>'
+				'<a href="https://ko-fi.com/wpalan" target="_blank">' . esc_html( $this->get_string( 34 ) ) . '</a>'
 			);
 
 			$links = array_merge( $links, $new_links );
@@ -362,6 +363,8 @@ EOT;
 			 */
 			esc_html__( 'Buy Me a Coffee makes supporting fun and easy. In just a couple of taps, you can donate (buy me a coffee) and leave a message. You don’t even have to create an account!', 'plugin-donation-lib' ),
 			// 37
+			esc_html__( 'Github ISSUES', 'plugin-donation-lib' ),
+			// 38
 		);
 
 		$this->strings = apply_filters( 'plugindonation_lib_strings_' . $this->plugin_slug, $this->strings );
@@ -372,8 +375,8 @@ EOT;
 	 * @since 1.0
 	 */
 	public function display() {
-		if ( $this->freemius !== null &&  ! $this->freemius->is_free_plan() ) {
-            return;
+		if ( $this->freemius !== null && ! $this->freemius->is_free_plan() ) {
+			return;
 		}
 		?>
         <tr valign="top">
@@ -391,23 +394,10 @@ EOT;
                 <!-- Tab links -->
                 <div class="tab">
                     <button class="tablinks" onclick="openPDLTab(event, 'BMAC')"><img height="32"
-                                                                                     src="<?php echo plugin_dir_url( __FILE__ ) . 'images/logos/BMAC.svg'; ?>">
-                    </button>
-                    <button class="tablinks" onclick="openPDLTab(event, 'BTC')"><img height="32"
-                                                                                     src="<?php echo plugin_dir_url( __FILE__ ) . 'images/logos/BTC.png'; ?>">
+                                                                                      src="<?php echo plugin_dir_url( __FILE__ ) . 'images/logos/BMAC.svg'; ?>">
                     </button>
                     <button class="tablinks" onclick="openPDLTab(event, 'PP')"><img height="32"
                                                                                     src="<?php echo plugin_dir_url( __FILE__ ) . 'images/logos/PP.png'; ?>">
-                    </button>
-                    <button class="tablinks" onclick="openPDLTab(event, 'BCH')"><img height="32"
-                                                                                     src="<?php echo plugin_dir_url( __FILE__ ) . 'images/logos/BCH.png'; ?>"><br>Bitcoin
-                        Cash
-                    </button>
-                    <button class="tablinks" onclick="openPDLTab(event, 'ETH')"><img height="32"
-                                                                                     src="<?php echo plugin_dir_url( __FILE__ ) . 'images/logos/ETH.png'; ?>"><br>Ethereum
-                    </button>
-                    <button class="tablinks" onclick="openPDLTab(event, 'DOGE')"><img height="32"
-                                                                                      src="<?php echo plugin_dir_url( __FILE__ ) . 'images/logos/DOGE.png'; ?>"><br>Dogecoin
                     </button>
 
                 </div>
@@ -419,25 +409,12 @@ EOT;
                             <img height="48" src="<?php echo plugin_dir_url( __FILE__ ) . 'images/logos/BMAC.svg'; ?>">
                         </div>
                         <div>
-			                <?php echo esc_html( $this->get_string( 37 ) ); ?><br><br> <strong><a
+							<?php echo esc_html( $this->get_string( 37 ) ); ?><br><br> <strong><a
                                         href="https://www.buymeacoffee.com/wpdevalan">https://www.buymeacoffee.com/wpdevalan</a></strong>
                         </div>
                         <div>
                             <img height="140"
                                  src="<?php echo plugin_dir_url( __FILE__ ) . 'images/QRcodes/BMAC.png'; ?>">
-                        </div>
-                    </div>
-                    <div id="BTC" class="tabcontent">
-                        <div>
-                            <img height="48" src="<?php echo plugin_dir_url( __FILE__ ) . 'images/logos/BTC.png'; ?>">
-                        </div>
-                        <div>
-							<?php echo esc_html( $this->get_string( 4 ) ); ?><br><br> <strong><a
-                                        href="https://www.blockchain.com/btc/address/bc1q04zt3yxxu282ayg3aev633twpqtw0dzzetp78x">bc1q04zt3yxxu282ayg3aev633twpqtw0dzzetp78x</a></strong>
-                        </div>
-                        <div>
-                            <img height="140"
-                                 src="<?php echo plugin_dir_url( __FILE__ ) . 'images/QRcodes/BTC.png'; ?>">
                         </div>
                     </div>
                     <div id="PP" class="tabcontent">
@@ -453,40 +430,7 @@ EOT;
                                                      src="<?php echo plugin_dir_url( __FILE__ ) . 'images/logos/PPcards.png'; ?>">
                             </a></div>
                     </div>
-                    <div id="BCH" class="tabcontent">
-                        <div><img height="48" src="<?php echo plugin_dir_url( __FILE__ ) . 'images/logos/BCH.png'; ?>">
-                        </div>
-                        <div>
-							<?php echo esc_html( $this->get_string( 6 ) ); ?><br><br><strong>bitcoincash:qpmn76wad2mwfhk3c9vhx77ex5nqhq2r0ursp8z6mp</strong>
-                        </div>
-                        <div>
-                            <img height="140"
-                                 src="<?php echo plugin_dir_url( __FILE__ ) . 'images/QRcodes/BCH.png'; ?>">
-                        </div>
-                    </div>
 
-                    <div id="ETH" class="tabcontent">
-                        <div><img height="48" src="<?php echo plugin_dir_url( __FILE__ ) . 'images/logos/ETH.png'; ?>">
-                        </div>
-                        <div>
-							<?php echo esc_html( $this->get_string( 7 ) ); ?><br><br><strong>0x492Bdf65bcB65bC067Ab3886e9B79a7CDe9021BB</strong>
-                        </div>
-                        <div>
-                            <img height="140"
-                                 src="<?php echo plugin_dir_url( __FILE__ ) . 'images/QRcodes/ETH.png'; ?>">
-                        </div>
-                    </div>
-                    <div id="DOGE" class="tabcontent">
-                        <h3><img height="48" src="<?php echo plugin_dir_url( __FILE__ ) . 'images/logos/DOGE.png'; ?>">Dogecoin
-                        </h3>
-                        <div>
-							<?php echo esc_html( $this->get_string( 8 ) ); ?><br><br><strong>D7nB2HsBxNPACis9fSgjqTShe4JfSztAjr</strong>
-                        </div>
-                        <div>
-                            <img height="140"
-                                 src="<?php echo plugin_dir_url( __FILE__ ) . 'images/QRcodes/DOGE.png'; ?>">
-                        </div>
-                    </div>
                 </div>
             </td>
         </tr>
@@ -498,15 +442,31 @@ EOT;
                 </h3>
                 <!-- Tab links -->
                 <div class="tab">
-                    <button class="tablinks" onclick="openPDLTab(event, 'review-tab')"><img height="32"
-                                                                                            src="<?php echo plugin_dir_url( __FILE__ ) . 'images/logos/reviews.png'; ?>"><br><?php echo esc_html( $this->get_string( 11 ) ); ?>
-                    </button>
-                    <button class="tablinks" onclick="openPDLTab(event, 'translate-tab')"><img height="32"
-                                                                                               src="<?php echo plugin_dir_url( __FILE__ ) . 'images/logos/translate.png'; ?>"><br><?php echo esc_html( $this->get_string( 12 ) ); ?>
-                    </button>
+					<?php
+					//  here check repo
+					if ( 'wp.org' === $this->repo ) {
+						?>
+                        <button class="tablinks" onclick="openPDLTab(event, 'review-tab')"><img height="32"
+                                                                                                src="<?php echo plugin_dir_url( __FILE__ ) . 'images/logos/reviews.png'; ?>"><br><?php echo esc_html( $this->get_string( 11 ) ); ?>
+                        </button>
+                        <button class="tablinks" onclick="openPDLTab(event, 'translate-tab')"><img height="32"
+                                                                                                   src="<?php echo plugin_dir_url( __FILE__ ) . 'images/logos/translate.png'; ?>"><br><?php echo esc_html( $this->get_string( 12 ) ); ?>
+                        </button>
+						<?php
+						//  end check repo
+					}
+					?>
+		<?php
+		//  here check repo
+		if ( 'wp.org' === $this->repo || 'github.org' === $this->repo ) {
+			?>
                     <button class="tablinks" onclick="openPDLTab(event, 'github-tab')"><img height="32"
                                                                                             src="<?php echo plugin_dir_url( __FILE__ ) . 'images/logos/github.png'; ?>"><br><?php echo esc_html( $this->get_string( 36 ) ); ?>
                     </button>
+			<?php
+			//  end check repo
+		}
+		?>
                 </div>
                 <!-- Tab content -->
                 <div class="tabcontentwrap">
@@ -560,9 +520,26 @@ EOT;
         <tr valign="top">
             <th scope="row"><?php echo esc_html( $this->get_string( 20 ) ); ?></th>
             <td>
+		<?php
+		//  here check repo
+		if ( 'wp.org' === $this->repo  ) {
+			?>
                 <a class="button-secondary"
                    href="https://wordpress.org/support/plugin/<?php echo esc_attr( $this->plugin_slug ); ?>/"
                    target="_blank"><?php echo esc_html( $this->get_string( 21 ) ); ?></a>
+			<?php
+			//  end check repo
+		}
+		//  here check repo
+		if ( 'github.com' === $this->repo  ) {
+			?>
+            <a class="button-secondary"
+               href="https://github.com/alanef/<?php echo esc_attr( $this->plugin_slug ); ?>/issues"
+               target="_blank"><?php echo esc_html( $this->get_string( 38 ) ); ?></a>
+			<?php
+			//  end check repo
+		}
+		?>
             </td>
         </tr>
 		<?php
@@ -572,9 +549,9 @@ EOT;
 	 * @since 1.0
 	 */
 	public function display_admin_notice() {
-        if ( $this->freemius !== null && ! $this->freemius->is_free_plan() ) {
-            return;
-        }
+		if ( $this->freemius !== null && ! $this->freemius->is_free_plan() ) {
+			return;
+		}
 		$this->set_timers();
 		// Don't display notices to users that can't do anything about it.
 		if ( ! current_user_can( 'install_plugins' ) ) {
@@ -652,22 +629,22 @@ EOT;
 		}
 		$user_id = get_current_user_id();
 		/* handle issue of old version */
-        $slugs =array(
-	        'stop-user-enumeration',
-            'clean-and-simple-contact-form-by-meg-nicholas',
-            'redirect-404-error-page-to-homepage-or-custom-page',
-            'simple-google-maps-short-code',
-	        'stop-wp-emails-going-to-spam',
-        );
-        foreach( $slugs as $slug) {
-	        $legacy = get_user_meta( $user_id, $slug .'_pdlib_dismissed_notices', true );
-	        if ( ! empty( $legacy ) ) {
-		        update_user_meta( $user_id, 'pdlib_dismissed_notices', $legacy );
-		        delete_user_meta( $user_id, $slug .'_pdlib_dismissed_notices' );
-                break;
-	        }
-        }
-        /* end of tidy up */
+		$slugs = array(
+			'stop-user-enumeration',
+			'clean-and-simple-contact-form-by-meg-nicholas',
+			'redirect-404-error-page-to-homepage-or-custom-page',
+			'simple-google-maps-short-code',
+			'stop-wp-emails-going-to-spam',
+		);
+		foreach ( $slugs as $slug ) {
+			$legacy = get_user_meta( $user_id, $slug . '_pdlib_dismissed_notices', true );
+			if ( ! empty( $legacy ) ) {
+				update_user_meta( $user_id, 'pdlib_dismissed_notices', $legacy );
+				delete_user_meta( $user_id, $slug . '_pdlib_dismissed_notices' );
+				break;
+			}
+		}
+		/* end of tidy up */
 		$um = get_user_meta( $user_id, 'pdlib_dismissed_notices', true );
 		if ( ! is_array( $um ) ) {
 			$um = array();

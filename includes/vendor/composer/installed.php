@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'fullworks/get-directions',
-        'pretty_version' => '2.15.10.x-dev',
-        'version' => '2.15.10.9999999-dev',
-        'reference' => 'fdef7b2bf28c89554bd0cf6245945eddd05b3a8c',
+        'pretty_version' => '2.16.1.x-dev',
+        'version' => '2.16.1.9999999-dev',
+        'reference' => '32f9190de1082f52053fadd89475d03c2fb67945',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'alanef/plugindonation_lib' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '6fe8152ef59ef20616b2828a2b21db5e0b541f8c',
+            'reference' => '2256b23424ea8ed329585bfe91012eed2e884582',
             'type' => 'library',
             'install_path' => __DIR__ . '/../alanef/plugindonation_lib',
             'aliases' => array(
@@ -40,18 +40,20 @@
             'dev_requirement' => false,
         ),
         'freemius/wordpress-sdk' => array(
-            'pretty_version' => '2.5.0-rc.2',
-            'version' => '2.5.0.0-RC2',
-            'reference' => '60bf619de3602785edb7c58b94fb2e82bb2b99c3',
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => '2e56d683dd7b30445940679ecb401d2aff746c9e',
             'type' => 'library',
             'install_path' => __DIR__ . '/../freemius/wordpress-sdk',
-            'aliases' => array(),
+            'aliases' => array(
+                0 => '9999999-dev',
+            ),
             'dev_requirement' => false,
         ),
         'fullworks/get-directions' => array(
-            'pretty_version' => '2.15.10.x-dev',
-            'version' => '2.15.10.9999999-dev',
-            'reference' => 'fdef7b2bf28c89554bd0cf6245945eddd05b3a8c',
+            'pretty_version' => '2.16.1.x-dev',
+            'version' => '2.16.1.9999999-dev',
+            'reference' => '32f9190de1082f52053fadd89475d03c2fb67945',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../../',
             'aliases' => array(),
@@ -69,7 +71,7 @@
         'matomo/device-detector' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '16327a07db6351975e3752d490195cf851c2afb0',
+            'reference' => '773da1d04089179ef96c3a6ae5aaea79d8f07f71',
             'type' => 'library',
             'install_path' => __DIR__ . '/../matomo/device-detector',
             'aliases' => array(

@@ -1,4 +1,4 @@
-# Copyright (C) 2022 get-directions
+# Copyright (C) 2023 get-directions
 # This file is distributed under the same license as the get-directions package.
 msgid ""
 msgstr ""
@@ -53,205 +53,55 @@ msgstr ""
 msgid "Custom text on pop up"
 msgstr ""
 
-#: src/admin/class-settings.php:54
+#: src/admin/class-admin.php:115
+msgid "Get Directions Map Plugin is END OF LIFE support is discontuning - find an alternatuve map plugin and remove this one"
+msgstr ""
+
+#: src/admin/class-settings.php:44
 msgid "MapQuest - Get Directions"
 msgstr ""
 
-#: src/admin/class-settings.php:76
+#: src/admin/class-settings.php:60
 msgid ""
-"Welcome. To use this plugin add the widget or shortcode to your website <br>\n"
+"PLEASE NOTE THIS PLUGIN IS END OF LIFE - THE FREE VERSION IS NO LONGER SUPPORTED. To use this plugin add the widget or shortcode to your website <br>\n"
 "            You will also need to obtain and store MapQuest API Key, see the tab for that. <br><br>\n"
 "            For more detailed setup and usage instructions visit <a class=\"button-secondary\" target=\"_blank\" href=\"https://fullworks.net/technical-documentation/get-directions-usage-instructions\" >this page.</a><br>\n"
-"            Support for the <strong>free</strong> version is provided <a class=\"button-secondary\" href=\"https://wordpress.org/support/plugin/get-directions\" target=\"_blank\">here on WordPress.org.</a><br>\n"
+"            Support for the <strong>free</strong> version has ended<br>\n"
 "			<br>\n"
-"			Get a FREE trial of the Pro version - <a href=\"%1$s\">click here</a> \n"
-"			<ul style=\"list-style-type:disc;\">\n"
-"				<li>7 day free trial</li>\n"
-"				<li>Multi map pins, by post or custom post,easily build a geo directory</li>\n"
-"				<li>Different map skins</li>\n"
-"				<li>Direct support</li>\n"
-"			</ul>\n"
+"			\n"
 "			"
 msgstr ""
 
-#: src/admin/class-settings.php:92
+#: src/admin/class-settings.php:70
 msgid ""
-"Welcome to the premium version of this map plugin %1$s. <br><br>To use this plugin add the widget or shortcode to your website or use the shortcode in your pages or posts<br><br>\n"
+"PLEASE NOTE THIS PLUGIN IS END OF LIFE. ALL SUPPORT WILL BE TERMINATED BY 1st AUGUST 2023. Welcome to the premium version of this map plugin %1$s. <br><br>To use this plugin add the widget or shortcode to your website or use the shortcode in your pages or posts<br><br>\n"
 "            You will also need to obtain and store MapQuest API Key, see the API Keys tab for that.<br><br>\n"
 "            For more detailed setup and usage instructions visit <a class=\"button-secondary\" target=\"_blank\" href=\"https://fullworks.net/docs/get-directions/\" >the knowledgebase.</a><br>\n"
 "			"
 msgstr ""
 
-#: src/admin/class-settings.php:102
+#: src/admin/class-settings.php:79
 msgid "Information"
 msgstr ""
 
-#: src/admin/class-settings.php:110
+#: src/admin/class-settings.php:87
 msgid "Sign up to a MapQuest Plan using this %1$slink%2$s"
 msgstr ""
 
-#: src/admin/class-settings.php:113
+#: src/admin/class-settings.php:90
 msgid "Then login to MapQuest Developers and create an API key using this %1$slink%2$s"
 msgstr ""
 
-#: src/admin/class-settings.php:118
+#: src/admin/class-settings.php:95
 msgid "MapQuest API Keys"
 msgstr ""
 
-#: src/admin/class-settings.php:126
+#: src/admin/class-settings.php:103
 msgid "Consumer Key"
 msgstr ""
 
-#: src/admin/class-settings.php:127
+#: src/admin/class-settings.php:104
 msgid "Copy and paste your consumer key here"
-msgstr ""
-
-#: src/admin/class-settings.php:163
-msgid "Gift a Donation"
-msgstr ""
-
-#: src/admin/class-settings.php:165
-msgid "Hi, I'm Alan and you are using the free version of this plugin."
-msgstr ""
-
-#: src/admin/class-settings.php:167
-msgid "There is a paid for version, but if you are going to just use the free version then a great way to support the ongoing provision of the free version is to gift me a small donation"
-msgstr ""
-
-#: src/admin/class-settings.php:169
-msgid "Gift a donation: select your desired option"
-msgstr ""
-
-#: src/admin/class-settings.php:171
-msgid "My Bitcoin donation wallet"
-msgstr ""
-
-#: src/admin/class-settings.php:173
-msgid "Gift a donation via PayPal"
-msgstr ""
-
-#: src/admin/class-settings.php:175
-msgid "My Bitcoin Cash address"
-msgstr ""
-
-#: src/admin/class-settings.php:177
-msgid "My Ethereum address"
-msgstr ""
-
-#: src/admin/class-settings.php:179
-msgid "My Dogecoin address"
-msgstr ""
-
-#: src/admin/class-settings.php:181
-msgid "Contribute"
-msgstr ""
-
-#: src/admin/class-settings.php:183
-msgid "Contribute to the Open Source Project in other ways"
-msgstr ""
-
-#: src/admin/class-settings.php:185
-msgid "Submit a review"
-msgstr ""
-
-#: src/admin/class-settings.php:187
-msgid "Translate to your language"
-msgstr ""
-
-#: src/admin/class-settings.php:189
-msgid "SUBMIT A REVIEW"
-msgstr ""
-
-#: src/admin/class-settings.php:191
-msgid "If you are happy with the plugin then we would love a review. Even if you are not so happy feedback is always useful, but if you have issues we would love you to make a support request first so we can try and help."
-msgstr ""
-
-#: src/admin/class-settings.php:193
-msgid "SUPPORT FORUM"
-msgstr ""
-
-#: src/admin/class-settings.php:195
-msgid "Providing some translations for a plugin is very easy and can be done via the WordPress system. You can easily contribute to the community and you don't need to translate it all."
-msgstr ""
-
-#: src/admin/class-settings.php:197
-msgid "TRANSLATE INTO YOUR LANGUAGE"
-msgstr ""
-
-#: src/admin/class-settings.php:199
-msgid "As an open source project you are welcome to contribute to the development of the software if you can. The development plugin is hosted on GitHub."
-msgstr ""
-
-#: src/admin/class-settings.php:201
-msgid "CONTRIBUTE ON GITHUB"
-msgstr ""
-
-#: src/admin/class-settings.php:203
-msgid "Get Support"
-msgstr ""
-
-#: src/admin/class-settings.php:205
-msgid "WordPress SUPPORT FORUM"
-msgstr ""
-
-#: src/admin/class-settings.php:207
-msgid "Hi I'm Alan and I support the free version of the plugin"
-msgstr ""
-
-#: src/admin/class-settings.php:209
-msgid "for you.  You have been using the free plugin for a while now and WordPress has probably been through several updates by now. So I'm asking if you can help keep the free version available, by donating a very small amount of cash. If you can that would be a fantastic help to keeping this plugin updated."
-msgstr ""
-
-#: src/admin/class-settings.php:211
-msgid "Donate via this page"
-msgstr ""
-
-#: src/admin/class-settings.php:213
-msgid "Remind me later"
-msgstr ""
-
-#: src/admin/class-settings.php:215
-msgid "I have already donated"
-msgstr ""
-
-#: src/admin/class-settings.php:217
-msgid "I don't want to donate, dismiss this notice permanently"
-msgstr ""
-
-#: src/admin/class-settings.php:219
-msgid "Hi I'm Alan and you have been using this free version of this plugin"
-msgstr ""
-
-#: src/admin/class-settings.php:221
-msgid "for a while - that is awesome! Could you please do me a BIG favor and give it a 5-star rating on WordPress? Just to help spread the word and boost my motivation.."
-msgstr ""
-
-#: src/admin/class-settings.php:223
-msgid "OK, you deserve it"
-msgstr ""
-
-#: src/admin/class-settings.php:225
-msgid "Maybe later"
-msgstr ""
-
-#: src/admin/class-settings.php:227
-msgid "Already done"
-msgstr ""
-
-#: src/admin/class-settings.php:229
-msgid "No thanks, dismiss this request"
-msgstr ""
-
-#: src/admin/class-settings.php:231
-msgid "Donate to Support"
-msgstr ""
-
-#: src/admin/class-settings.php:233
-msgid "Settings"
-msgstr ""
-
-#: src/admin/class-settings.php:235
-msgid "Help Develop"
 msgstr ""
 
 #: src/frontend/class-frontend.php:340

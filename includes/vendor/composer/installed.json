@@ -6,16 +6,16 @@
             "version_normalized": "dev-master",
             "source": {
                 "type": "git",
-                "url": "git@github.com:alanef/plugindonation_lib.git",
-                "reference": "6fe8152ef59ef20616b2828a2b21db5e0b541f8c"
+                "url": "https://github.com/alanef/plugindonation_lib.git",
+                "reference": "2256b23424ea8ed329585bfe91012eed2e884582"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/alanef/plugindonation_lib/zipball/6fe8152ef59ef20616b2828a2b21db5e0b541f8c",
-                "reference": "6fe8152ef59ef20616b2828a2b21db5e0b541f8c",
+                "url": "https://api.github.com/repos/alanef/plugindonation_lib/zipball/2256b23424ea8ed329585bfe91012eed2e884582",
+                "reference": "2256b23424ea8ed329585bfe91012eed2e884582",
                 "shasum": ""
             },
-            "time": "2022-03-17T14:01:32+00:00",
+            "time": "2022-12-09T14:54:16+00:00",
             "default-branch": true,
             "type": "library",
             "installation-source": "dist",
@@ -34,6 +34,10 @@
                 }
             ],
             "description": "Module for adding donation support to free plugins",
+            "support": {
+                "source": "https://github.com/alanef/plugindonation_lib/tree/master",
+                "issues": "https://github.com/alanef/plugindonation_lib/issues"
+            },
             "install-path": "../alanef/plugindonation_lib"
         },
         {
@@ -191,23 +195,24 @@
         },
         {
             "name": "freemius/wordpress-sdk",
-            "version": "2.5.0-rc.2",
-            "version_normalized": "2.5.0.0-RC2",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
             "source": {
                 "type": "git",
-                "url": "git@github.com:Freemius/wordpress-sdk.git",
-                "reference": "60bf619de3602785edb7c58b94fb2e82bb2b99c3"
+                "url": "https://github.com/Freemius/wordpress-sdk.git",
+                "reference": "2e56d683dd7b30445940679ecb401d2aff746c9e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Freemius/wordpress-sdk/zipball/60bf619de3602785edb7c58b94fb2e82bb2b99c3",
-                "reference": "60bf619de3602785edb7c58b94fb2e82bb2b99c3",
+                "url": "https://api.github.com/repos/Freemius/wordpress-sdk/zipball/2e56d683dd7b30445940679ecb401d2aff746c9e",
+                "reference": "2e56d683dd7b30445940679ecb401d2aff746c9e",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.2"
             },
-            "time": "2022-03-03T09:14:30+00:00",
+            "time": "2022-12-05T10:31:45+00:00",
+            "default-branch": true,
             "type": "library",
             "installation-source": "dist",
             "license": [
@@ -224,6 +229,10 @@
                 "wordpress-plugin",
                 "wordpress-theme"
             ],
+            "support": {
+                "source": "https://github.com/Freemius/wordpress-sdk/tree/2.5.3",
+                "issues": "https://github.com/Freemius/wordpress-sdk/issues"
+            },
             "install-path": "../freemius/wordpress-sdk"
         },
         {
@@ -281,12 +290,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/matomo-org/device-detector.git",
-                "reference": "16327a07db6351975e3752d490195cf851c2afb0"
+                "reference": "773da1d04089179ef96c3a6ae5aaea79d8f07f71"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/matomo-org/device-detector/zipball/16327a07db6351975e3752d490195cf851c2afb0",
-                "reference": "16327a07db6351975e3752d490195cf851c2afb0",
+                "url": "https://api.github.com/repos/matomo-org/device-detector/zipball/773da1d04089179ef96c3a6ae5aaea79d8f07f71",
+                "reference": "773da1d04089179ef96c3a6ae5aaea79d8f07f71",
                 "shasum": ""
             },
             "require": {
@@ -309,7 +318,7 @@
                 "doctrine/cache": "Can directly be used for caching purpose",
                 "ext-yaml": "Necessary for using the Pecl YAML parser"
             },
-            "time": "2022-11-02T10:35:09+00:00",
+            "time": "2023-02-06T08:02:57+00:00",
             "default-branch": true,
             "type": "library",
             "installation-source": "dist",

@@ -62,7 +62,7 @@ class FrontEnd
      */
     public function enqueue_scripts()
     {
-        //	https://api.mqcdn.com/sdk/mapquest-js/v1.2.0/mapquest.js
+        //	https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js
         wp_enqueue_script(
             'mapquest-js',
             plugin_dir_url( __FILE__ ) . 'js/mapquest.js',

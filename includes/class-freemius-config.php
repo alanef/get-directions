@@ -41,24 +41,11 @@ class Freemius_Config
         
         $get_directions_fs->add_filter(
             'is_submenu_visible',
-            array( $this, '_fs_show_contact_menu' ),
+            '__return_false',
             10,
             2
         );
         return $get_directions_fs;
-    }
-    
-    public function _fs_show_contact_menu( $is_visible, $menu_id )
-    {
-        /** @var \Freemius $wfea_fs Freemius global object. */
-        global  $get_directions_fs ;
-        if ( 'contact' === $menu_id ) {
-            return $get_directions_fs->has_any_license();
-        }
-        if ( 'support' === $menu_id ) {
-            return $get_directions_fs->is_free_plan();
-        }
-        return $is_visible;
     }
 
 }
