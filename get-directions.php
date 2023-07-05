@@ -14,7 +14,7 @@
  * Plugin Name:       Get Directions Map
  * Plugin URI:        http://fullworks.net/products/get-directions/
  * Description:       Map with directions display using MapQuest
- * Version:           2.16.1
+ * Version:           2.16.2
  * Author:            Fullworks
  * Author URI:        http://fullworks.net/
  * Requires at least: 4.8
@@ -40,7 +40,7 @@ if ( ! defined( 'WPINC' ) ) {
 
 if (!function_exists('Get_Directions\run_Get_Directions')) {
 	define( 'GET_DIRECTIONS_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
-	define( 'GET_DIRECTIONS_PLUGIN_VERSION', '2.16.0' );
+	define( 'GET_DIRECTIONS_PLUGIN_VERSION', '2.16.2' );
 
 // Include the autoloader so we can dynamically include the classes.
 	require_once GET_DIRECTIONS_PLUGIN_DIR . 'includes/autoloader.php';

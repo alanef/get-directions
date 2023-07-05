@@ -2,8 +2,8 @@
 Contributors: fullworks, alanfuller
 Donate Link: https://www.paypal.com/donate/?hosted_button_id=UGRBY5CHSD53Q
 Tags: MapQuest, Maps, Responsive Map, Directions, Get Directions, Map
-Tested up to: 6.0
-Stable tag: 2.16.1
+Tested up to: 6.2
+Stable tag: 2.16.2
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 Type: freemium
@@ -134,6 +134,9 @@ Multiple map marker is only available in the Pro version
 
 
 == Changelog ==
+= 2.16.2 =
+* Freemius library update
+
 = 2.16.1 =
 * Notice this plugin is being retired - please find an alternative
 

@@ -1,4 +1,7 @@
 == Changelog ==
+= 2.16.2 =
+* Freemius library update
+
 = 2.16.1 =
 * Notice this plugin is being retired - please find an alternative
 
